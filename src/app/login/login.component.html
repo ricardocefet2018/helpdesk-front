@@ -1,0 +1,40 @@
+<div class="formOutline">
+  <p
+    style="
+      text-align: center;
+      margin-top: 1em;
+      color: #ff9800;
+      font-size: 1.5em;
+    "
+  >
+    <!-- <span class="material-icons" style="font-size: 50px"> account_circle </span> -->
+    HelpDesk
+  </p>
+  <h2 style="text-align: center">Fazer login</h2>
+  <form [formGroup]="form" style="padding: 1em" (ngSubmit)="login()">
+    <mat-form-field style="width: 100%">
+      <mat-label>Nome de usuário ou e-mail</mat-label>
+      <input matInput type="text" formControlName="login" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+    <button
+      mat-button
+      color="primary"
+      style="margin-left: -16px"
+      [routerLink]="['/signup']"
+    >
+      Criar conta
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      style="float: right"
+      type="submit"
+    >
+      Entrar
+    </button>
+  </form>
+</div>

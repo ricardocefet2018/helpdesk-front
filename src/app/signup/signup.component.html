@@ -1,0 +1,48 @@
+<div class="formOutline">
+  <p
+    style="
+      text-align: center;
+      margin-top: 1em;
+      color: #ff9800;
+      font-size: 1.5em;
+    "
+  >
+    <!-- <span class="material-icons" style="font-size: 50px"> account_circle </span> -->
+    HelpDesk
+  </p>
+  <h2 style="text-align: center">Fazer cadastro</h2>
+  <form [formGroup]="form" style="padding: 1em">
+    <mat-form-field style="width: 100%">
+      <mat-label>Username</mat-label>
+      <input matInput type="text" formControlName="username" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <mat-label>E-mail</mat-label>
+      <input matInput type="text" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+      <mat-label>Confirme a senha</mat-label>
+      <input matInput type="password" formControlName="confirmPassword" />
+    </mat-form-field>
+    <button
+      mat-button
+      color="primary"
+      style="margin-left: -16px"
+      [routerLink]="['/login']"
+    >
+      Fazer login
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      style="float: right"
+      type="submit"
+    >
+      Criar conta
+    </button>
+  </form>
+</div>
