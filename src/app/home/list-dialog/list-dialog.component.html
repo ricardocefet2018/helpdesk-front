@@ -1,0 +1,28 @@
+<h2 mat-dialog-title class="dialog-title">Categorias:</h2>
+<mat-list mat-dialog-content>
+  <mat-list-item
+    *ngFor="let category of categories"
+    [style.background-color]="category.color"
+    [style.color]="category.fontColor"
+    style="border-radius: 0.5em; margin: 0.5em auto 0.5em auto"
+  >
+    <span>
+      {{ category.name }}
+    </span>
+    <span class="material-icons" style="margin-left: auto; margin-right: 0">
+      close
+    </span>
+  </mat-list-item>
+</mat-list>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" color="primary">Fechar</button>
+  <button
+    mat-raised-button
+    [mat-dialog-close]="'category-form'"
+    cdkFocusInitial
+    style="margin-right: 0; margin-left: auto"
+    color="primary"
+  >
+    <span class="material-icons"> add </span> Nova categoria
+  </button>
+</div>

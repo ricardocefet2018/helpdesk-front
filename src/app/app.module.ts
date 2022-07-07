@@ -22,9 +22,24 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MonthViewComponent } from './home/month-view/month-view.component';
 import { WeekViewComponent } from './home/week-view/week-view.component';
 import { DayViewComponent } from './home/day-view/day-view.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CategoryFormComponent } from './home/category-form/category-form.component';
+import { ThemeFormComponent } from './home/theme-form/theme-form.component';
+import { ListDialogComponent } from './home/list-dialog/list-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent, HomeComponent, MonthViewComponent, WeekViewComponent, DayViewComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    HomeComponent,
+    MonthViewComponent,
+    WeekViewComponent,
+    DayViewComponent,
+    CategoryFormComponent,
+    ThemeFormComponent,
+    ListDialogComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,6 +53,7 @@ import { DayViewComponent } from './home/day-view/day-view.component';
     MatListModule,
     MatToolbarModule,
     MatDividerModule,
+    MatDialogModule,
   ],
   providers: [
     {
