@@ -1,0 +1,50 @@
+<h2 class="dialog-title">Nova atividade</h2>
+<form [formGroup]="taskForm">
+  <mat-form-field style="width: 100%">
+    <mat-label>Nome da atividade</mat-label>
+    <input matInput type="text" formControlName="name" />
+  </mat-form-field>
+  <mat-form-field style="width: calc(50% - 0.5em); margin-right: 0.5em">
+    <mat-label>Inicio</mat-label>
+    <input matInput type="text" formControlName="inicio" />
+  </mat-form-field>
+  <mat-form-field style="width: calc(50% - 0.5em); margin-left: 0.5em">
+    <mat-label>Fim</mat-label>
+    <input matInput type="text" formControlName="fim" />
+  </mat-form-field>
+  <mat-form-field style="width: 100%">
+    <mat-label>Categoria</mat-label>
+    <select matNativeControl required>
+      <option value="prova">Prova</option>
+      <option value="trabalho">Trabalho</option>
+      <option value="tarefa">Tarefa</option>
+    </select>
+  </mat-form-field>
+  <mat-form-field style="width: 100%">
+    <mat-label>Dificuldade</mat-label>
+    <select matNativeControl required>
+      <option value="md">Muito difícil</option>
+      <option value="d">Difícil</option>
+      <option value="m">Médio</option>
+      <option value="f">Fácil</option>
+      <option value="mf">Muito fácil</option>
+    </select>
+  </mat-form-field>
+  <button
+    mat-button
+    style="margin-left: -16px"
+    (click)="onNoClick()"
+    color="primary"
+  >
+    Cancelar
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    style="float: right"
+    type="submit"
+    (click)="submit()"
+  >
+    Criar
+  </button>
+</form>

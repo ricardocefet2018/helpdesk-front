@@ -45,3 +45,11 @@ mat-toolbar .example-app-name {
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+
+.floating-button{
+  position: fixed;
+  top: auto;
+  right: 1em;
+  bottom: 1em;
+  left: auto;
+}

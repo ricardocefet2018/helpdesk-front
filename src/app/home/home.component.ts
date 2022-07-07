@@ -4,6 +4,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoryFormComponent } from './category-form/category-form.component';
 import { ListDialogComponent } from './list-dialog/list-dialog.component';
+import { TaskFormComponent } from './task-form/task-form.component';
 import { ThemeFormComponent } from './theme-form/theme-form.component';
 
 @Component({
@@ -47,12 +48,14 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  openDialogForm(T: 'theme-form' | 'category-form'): void {
+  openDialogForm(T: 'theme-form' | 'category-form' | 'task-form'): void {
     let component: ComponentType<any>;
     if (T == 'theme-form') {
       component = ThemeFormComponent;
-    } else {
+    } else if (T == 'category-form') {
       component = CategoryFormComponent;
+    } else {
+      component = TaskFormComponent;
     }
     const dialogRef = this.dialog.open(component, {
       width: '400px',

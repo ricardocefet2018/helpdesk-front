@@ -26,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CategoryFormComponent } from './home/category-form/category-form.component';
 import { ThemeFormComponent } from './home/theme-form/theme-form.component';
 import { ListDialogComponent } from './home/list-dialog/list-dialog.component';
+import { TaskFormComponent } from './home/task-form/task-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ListDialogComponent } from './home/list-dialog/list-dialog.component';
     CategoryFormComponent,
     ThemeFormComponent,
     ListDialogComponent,
+    TaskFormComponent,
   ],
   imports: [
     BrowserModule,

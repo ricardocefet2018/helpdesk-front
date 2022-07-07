@@ -57,6 +57,14 @@
       <month-view *ngIf="scope == 'm'"></month-view>
       <week-view *ngIf="scope == 'w'"></week-view>
       <day-view *ngIf="scope == 'd'"></day-view>
+      <button
+        mat-fab
+        color="primary"
+        class="floating-button"
+        (click)="openDialogForm('task-form')"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
