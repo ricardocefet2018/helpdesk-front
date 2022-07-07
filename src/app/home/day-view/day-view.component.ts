@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-day-view',
+  selector: 'day-view',
   templateUrl: './day-view.component.html',
-  styleUrls: ['./day-view.component.scss']
+  styleUrls: ['./day-view.component.scss'],
 })
 export class DayViewComponent implements OnInit {
+  dia = {
+    semana: 'Sab.',
+    mes: 9,
+  };
+  horas = Array.from({ length: 24 }).map((_, i) => ++i);
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

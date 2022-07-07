@@ -1,0 +1,30 @@
+.weekDate{
+  width: calc(80% - 1px);
+  display: inline-block;
+  margin-top: 40px;
+  transform: translateY(-50%);
+}
+
+.weekDate.border-right{
+  border-right: 1px solid #fff
+}
+
+.weekDate.border-left{
+  border-left: 1px solid #fff
+}
+
+.coluna-dia{
+  width: calc(80% - 1px);
+  display: inline-block;
+}
+
+.coluna-dia.border-right{
+  border-right: 1px solid #191919;
+}
+
+.hora{
+  height: 100px;
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #191919;
+}

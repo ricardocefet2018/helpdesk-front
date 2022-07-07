@@ -1,1 +1,19 @@
-<p>day-view works!</p>
+<div
+  style="position: fixed; width: 100%; height: 80px; background-color: #191919"
+>
+  <div class="weekDate" style="width: 20%"></div>
+  <div class="weekDate">
+    <p style="text-align: center; margin-bottom: 5px">{{ dia.semana }}</p>
+    <h2 style="text-align: center">{{ dia.mes }}</h2>
+  </div>
+</div>
+<div style="margin-top: 80px">
+  <div class="coluna-dia border-right" style="width: 20%">
+    <div class="hora" *ngFor="let hora of horas">
+      <p>{{ hora - 1 }}:00</p>
+    </div>
+  </div>
+  <div class="coluna-dia">
+    <div class="hora" *ngFor="let hora of horas"></div>
+  </div>
+</div>
