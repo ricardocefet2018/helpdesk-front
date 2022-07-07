@@ -1,0 +1,38 @@
+<div
+  style="position: fixed; width: 100%; height: 30px; background-color: #191919"
+>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>D</span>
+  </div>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>S</span>
+  </div>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>T</span>
+  </div>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>Q</span>
+  </div>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>Q</span>
+  </div>
+  <div class="weekDate" style="border-right: 1px solid #fff">
+    <span>S</span>
+  </div>
+  <div class="weekDate">
+    <span>S</span>
+  </div>
+</div>
+<div style="margin-top: 30px">
+  <div class="semana" *ngFor="let dia of dias">
+    <div
+      class="day-div"
+      *ngFor="let d of dia; let i = index"
+      [class.border-right]="i != 6"
+    >
+      <p style="text-align: center; margin-top: 0.5em">
+        {{ d }}
+      </p>
+    </div>
+  </div>
+</div>

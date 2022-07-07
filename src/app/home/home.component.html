@@ -3,7 +3,23 @@
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">Responsive App</h1>
+    <h1 class="example-app-name">HelpDesk</h1>
+    <div
+      style="
+        border: 2px solid #331d00;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: 8px;
+      "
+    >
+      <img
+        src="../../assets/foto.jpg"
+        alt="foto"
+        style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%"
+      />
+    </div>
   </mat-toolbar>
 
   <mat-sidenav-container
@@ -17,14 +33,28 @@
       fixedTopGap="56"
     >
       <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
-          nav
-        }}</a>
+        <h1 class="example-app-name" mat-list-item>HelpDesk</h1>
+        <button mat-list-item (click)="scope = 'd'">
+          <span class="material-icons"> view_day </span>&emsp;Dia
+        </button>
+        <button mat-list-item (click)="scope = 'w'">
+          <span class="material-icons"> calendar_view_week </span>&emsp;Semana
+        </button>
+        <button mat-list-item (click)="scope = 'm'">
+          <span class="material-icons"> calendar_view_month </span>&emsp;Mês
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-list-item>
+          <span class="material-icons"> category </span>&emsp;Categorias
+        </button>
+        <button mat-list-item>
+          <span class="material-icons"> school </span>&emsp;Matérias
+        </button>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{ content }}</p>
+      <month-view *ngIf="scope == 'm'"></month-view>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

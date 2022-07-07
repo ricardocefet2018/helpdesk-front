@@ -14,8 +14,24 @@
   z-index: 2;
 }
 
-h1.example-app-name {
+mat-nav-list .example-app-name {
+  display: none;
+  text-align: center;
+  color: #FF9800;
+}
+
+mat-toolbar .example-app-name {
   margin-left: 8px;
+}
+
+@media (max-width: 600px){
+  mat-toolbar .example-app-name{
+    display: none;
+  }
+
+  mat-nav-list .example-app-name {
+    display: block;
+  }
 }
 
 .example-sidenav-container {

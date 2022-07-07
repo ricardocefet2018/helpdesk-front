@@ -1,0 +1,22 @@
+.day-div {
+  height: calc((100vh - 56px - 30px) / 5 - 1px);
+  width: calc(100% / 7 - 1px);
+  display: inline-block;
+  border-bottom: 1px solid #191919;
+}
+
+.weekDate{
+  width: calc(100% / 7 - 1px);
+  display: inline-block;
+  margin-top: 15px;
+  transform: translateY(-50%);
+}
+
+.weekDate>span{
+  display: block;
+  text-align: center;
+}
+
+.border-right{
+  border-right: 1px solid #191919;
+}

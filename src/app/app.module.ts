@@ -18,9 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MonthViewComponent } from './home/month-view/month-view.component';
+import { WeekViewComponent } from './home/week-view/week-view.component';
+import { DayViewComponent } from './home/day-view/day-view.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, SignupComponent, HomeComponent, MonthViewComponent, WeekViewComponent, DayViewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +37,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    MatDividerModule,
   ],
   providers: [
     {
